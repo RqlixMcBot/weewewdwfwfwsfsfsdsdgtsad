@@ -879,9 +879,8 @@ Bot Command :     (Use Command On #『commands-📡』 )
 27 -  | *setstats | To But Your Server Stats in Voice Rooms 
 28 -  | *help-admin | If You Have Permissions Do That Command To Know Admins Commands In Bot
 29 -  | *store | To Know Ranks Server Store
-30 -  | *say | If You Want The Bot Send A message
-31 -  | *cutt | To CutTweet Games
-32 -  | *play | To Sra7a Game 
+30 -  | *cutt | To CutTweet Games
+31 -  | *play | To Sra7a Game 
 
 **`);
 
