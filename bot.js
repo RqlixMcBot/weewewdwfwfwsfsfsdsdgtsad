@@ -1,36 +1,40 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '*'
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
-  console.log('')
-  console.log('')
-  console.log('╔[═════════════════════════════════════════════════════════════════]╗')
-  console.log(`[Start] ${new Date()}`);
-  console.log('╚[═════════════════════════════════════════════════════════════════]╝')
-  console.log('')
-  console.log('╔[════════════════════════════════════]╗');
-  console.log(`Logged in as * [ " ${client.user.username} " ]`);
-  console.log('')
-  console.log('Informations :')
-  console.log('')
-  console.log(`servers! [ " ${client.guilds.size} " ]`);
-  console.log(`Users! [ " ${client.users.size} " ]`);
-  console.log(`channels! [ " ${client.channels.size} " ]`);
-  console.log('╚[════════════════════════════════════]╝')
-  console.log('')
-  console.log('╔[════════════]╗')
-  console.log(' Bot Is Online')
-  console.log('╚[════════════]╝')
-  console.log('')
-  console.log('')
-});
+
+
+
 
 client.login(process.env.BOT_TOKEN);
 
 
+
+
+
+
+
+
+client.on('ready',  () => {
+  console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+  console.log('by iTz_Volcano');
+  console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+  console.log(`Logged in as  * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
+  console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+  console.log('is online')
+client.user.setStatus("dnd");
+});
+
+// playing
+client.on('ready', () => {
+
+        console.log(`----------------`);
+              console.log(`iTz_Volcano`);
+      console.log(`Your Bot in  ${client.guilds.size} Servers `);
+    console.log(`----------------`);
+  client.user.setGame(` *help | *inv `,"https://twitch.tv/")
+
+
+});
 
 const craft = ['ماهو اسم احسن سيرفر اجنبي في ماين كرافت ؟',
 'هل للريد ستون اهميه كبيره في ماين كرافت ؟',
@@ -879,6 +883,9 @@ Bot Command :     (Use Command On #『commands-📡』 )
 27 -  | *setstats | To But Your Server Stats in Voice Rooms 
 28 -  | *help-admin | If You Have Permissions Do That Command To Know Admins Commands In Bot
 29 -  | *store | To Know Ranks Server Store
+30 -  | *say | If You Want The Bot Send A message
+31 -  | *cutt | To CutTweet Games
+32 -  | *play | To Sra7a Game 
 
 **`);
 
@@ -1520,3 +1527,5 @@ m.sendMessage(args)
 }
 
 })
+
+var prefix = '*'
