@@ -895,8 +895,7 @@ client.on('guildMemberRemove', member => {
     .setColor('RED')
     .setFooter(`RqlixMc Bot`, 'Soon')
 
-var channel =member.guild.channels.find('name', 'console
-					')
+var channel =member.guild.channels.find('name', 'console')
 if (!channel) return;
 channel.send({embed : embed});
 });
