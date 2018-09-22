@@ -880,7 +880,7 @@ client.on('guildMemberAdd', member => {
     .setColor('GREEN')
     .setFooter('RqlixMc Bot', 'Soon')
 
-var channel =member.guild.channels.find('name', 'welcome')
+var channel =member.guild.channels.find('name', 'chat-الشات')
 if (!channel) return;
 channel.send({embed : embed});
 });
@@ -895,7 +895,7 @@ client.on('guildMemberRemove', member => {
     .setColor('RED')
     .setFooter(`RqlixMc Bot`, 'Soon')
 
-var channel =member.guild.channels.find('name', 'log
+var channel =member.guild.channels.find('name', 'console
 					')
 if (!channel) return;
 channel.send({embed : embed});
