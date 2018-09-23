@@ -1104,57 +1104,115 @@ channel.guild.owner.send(`<@!${channelremover.id}>
 
 
 
-client.on('message', message => {
-     if (message.content === "*help") {
-message.author.send("" + `  **
+client.on("message", message => {
+ if (message.content === "*help") {
+        message.react("😘")
+           message.react("😵")
+  const embed = new Discord.RichEmbed() 
+      .setColor("#ffff00")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(`
+-🚀 سرعه اتصال ممتازه
+-😎 سهل الاستخدام 
+-⚠ صيانه كل يوم
+-💵 مجاني بل كامل 
+-📚 البوت عربي و سيتم اضافه اللغه النكليزية
 
-إذا حاب تكلمني ارسل رسالة لل بوت و انا اشوفها                                                                :                                                             if you want to talk with me you can send message to my bot (RqlixMc Bot)  I will read all message
+● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ● 
 
-Bot Command :     (Use Command On #『commands-📡』 )
-1  -  | *server | To Know Stats Of Server
-2  -  | *inv | To Know Bot : Link
-3  -  | *kick | To Kick Member
-4  -  | *bc | To Send Message To all Member
-5  -  | *ping | To Know You Ping
-6  -  | *help | To See Thats Menu
-7  -  | *staff | To Know The Bot Owner
-8  -  | *support | To See Support Server
-9  -  | *perm | To See All Your Permissions
-10 -  | *ser-av | To Get Server Avatar
-11 -  | *mute | To Mute Member                                    
-12 -  | *unmute | To UnMute Member                                
-13 -  | *Member | To Know How Much Member Online ...
-14 -  | *ban | To Ban Member     (You Must Have Perm)
-15 -  | *clear | To Clear Chat        (You Must Have Perm)
-16 -  | *bot | To Know The Bot How Many Server Invited
-17 -  | *emoji | To See Emoji Link
-18 -  | *time | To Know What : Day , And , Month .....
-19 -  | *update | To Know New update
-20 -  | *games | To Know Games Command
-21 -  | *rules | To Know Public Rules OR Server Rules
-22 -  | *id | 	To Know You Id And Your Playing And More ...
-23 -  | *ticket | To Open Ticket And Talk With Staff
-24 -  | *close | To Close The Ticket
-25 -  | *owner | To Know Bot Owner 
-26 -  | *h-apply | If You Want To Apply To Helper Rank In RqlixMc Server 
-27 -  | *setstats | To But Your Server Stats in Voice Rooms 
-28 -  | *help-admin | If You Have Permissions Do That Command To Know Admins Commands In Bot
-29 -  | *store | To Know Ranks Server Store
-30 -  | *report | To Report Player In Discord
-31 -  | *cutt | To CutTweet Games
-32 -  | *play | To Sra7a Game 
-33 -  | *top | To Know Top Inviter
-34 -  | *suggest | To Add A Suggests
-35 -  | *mc | To Close The Chat 
-36 -  | *umc | To Open The Chat
+💎『اوامر عامة』💎
+                        
+💎*staff | To Know The Bot Owner
 
-**`);
+💎*server | To Know Stats Of Server
 
-      message.channel.send('**تم ارسال ال رسالة في الخاص **');
+💎*emoji | To See Emoji Link
 
-    }
-});
+💎*rules | To Know Public Rules OR Server Rules
 
+💎*bot | To Know The Bot How Many Server Invited
+
+💎*ticket | To Open Ticket And Talk With Staff
+
+💎*close | To Close The Ticket
+
+💎*owner | To Know Bot Owner
+
+💎*h-apply | If You Want To Apply To Helper Rank In RqlixMc Server
+
+💎*store | To Know Ranks Server Store
+
+💎*report | To Report Player In Discord
+
+💎*id | 	To Know You Id And Your Playing And More ..
+
+💎*suggest | To Add A Suggests
+
+💎*top | To Know Top Inviter
+
+● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ● 
+
+👑『اوامر ادارية』👑
+
+👑*rooms 『لمعرفه عدد رومات السيرفر』
+
+👑*ban 『لتعطي شخص باند』
+
+👑*kick 『لتعطي شخص كيك』
+
+👑*clear 『لمسح الشات برقم』
+
+👑*unmute  『ل فك الميوت عن شخص  』
+
+👑*mute  『ل اعطاء شخص ميوت 』
+
+👑*umc  『مـلاحظه : لفتح الشات』
+
+👑*mc  『مـلاحظه : لاغلاق الشات』
+
+👑*bc  『مـلاحظه : ل ارسال رساله جماعيه』
+
+● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ● 
+
+🎲『القرعة』🎲
+
+🎲*roll   『القرعة من 1 الى 100』
+
+● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ● 
+
+🎮『العاب』🎮
+
+🎮*cutt       『كت تويت』
+
+🎮*play       『خواطر』
+
+● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ● 
+
+🎴『اوامر الصور』🎴
+
+🎴*ser-av 『لي عرض صورتك او صوره اي شخص』
+
+
+🎴قريبا
+
+
+● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ● 
+
+💎『الدعم الفني والمساعدة』💎
+
+*inv | القسم الاول لي اضافه البوت 
+
+● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ● 
+
+
+
+
+`)
+
+message.author.sendEmbed(embed)
+
+}
+}); 
 
 
 
