@@ -1102,8 +1102,6 @@ channel.guild.owner.send(`<@!${channelremover.id}>
 
 
 
-
-
 client.on("message", message => {
  if (message.content === "*help") {
         message.react("😘")
@@ -1122,75 +1120,75 @@ client.on("message", message => {
 
 💎『اوامر عامة』💎
                         
-💎 *staff | To Know The Bot Owner
+*staff | To Know The Bot Owner
 
-💎 *server | To Know Stats Of Server
+*server | To Know Stats Of Server
 
-💎 *emoji | To See Emoji Link
+*emoji | To See Emoji Link
 
-💎 *rules | To Know Public Rules OR Server Rules
+*rules | To Know Public Rules OR Server Rules
 
-💎 *bot | To Know The Bot How Many Server Invited
+*bot | To Know The Bot How Many Server Invited
 
-💎 *ticket | To Open Ticket And Talk With Staff
+*ticket | To Open Ticket And Talk With Staff
 
-💎 *close | To Close The Ticket
+*close | To Close The Ticket
 
-💎 *owner | To Know Bot Owner
+*owner | To Know Bot Owner
 
-💎 *h-apply | If You Want To Apply To Helper Rank In RqlixMc Server
+*h-apply | If You Want To Apply To Helper Rank In RqlixMc Server
 
-💎 *store | To Know Ranks Server Store
+*store | To Know Ranks Server Store
 
-💎 *report | To Report Player In Discord
+*report | To Report Player In Discord
 
-💎 *id | 	To Know You Id And Your Playing And More ..
+*id | 	To Know You Id And Your Playing And More ..
 
-💎 *suggest | To Add A Suggests
+*suggest | To Add A Suggests
 
-💎 *top | To Know Top Inviter
+*top | To Know Top Inviter
 
 ● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ● 
 
 👑『اوامر ادارية』👑
 
-👑 *rooms 『لمعرفه عدد رومات السيرفر』
+*rooms 『لمعرفه عدد رومات السيرفر』
 
-👑 *ban 『لتعطي شخص باند』
+*ban 『لتعطي شخص باند』
 
-👑 *kick 『لتعطي شخص كيك』
+*kick 『لتعطي شخص كيك』
 
-👑 *clear 『لمسح الشات برقم』
+*clear 『لمسح الشات برقم』
 
-👑 *unmute  『ل فك الميوت عن شخص  』
+*unmute  『ل فك الميوت عن شخص  』
 
-👑 *mute  『ل اعطاء شخص ميوت 』
+*mute  『ل اعطاء شخص ميوت 』
 
-👑 *umc  『مـلاحظه : لفتح الشات』
+*umc  『مـلاحظه : لفتح الشات』
 
-👑 *mc  『مـلاحظه : لاغلاق الشات』
+*mc  『مـلاحظه : لاغلاق الشات』
 
-👑 *bc  『مـلاحظه : ل ارسال رساله جماعيه』
+*bc  『مـلاحظه : ل ارسال رساله جماعيه』
 
 ● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ● 
 
 🎲『القرعة』🎲
 
-🎲 *roll   『القرعة من 1 الى 100』
+*roll   『القرعة من 1 الى 100』
 
 ● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ● 
 
 🎮『العاب』🎮
 
-🎮 *cutt       『كت تويت』
+*cutt       『كت تويت』
 
-🎮 *play       『خواطر』
+*play       『خواطر』
 
 ● ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ● 
 
 🎴『اوامر الصور』🎴
 
-🎴 *ser-av 『لي عرض صورتك او صوره اي شخص』
+*ser-av 『لي عرض صورتك او صوره اي شخص』
 
 🎴قريبا
 
@@ -1207,7 +1205,7 @@ client.on("message", message => {
 
 `)
 
-message.author.send("" + `  **
+message.author.sendEmbed(embed)
 
 }
 }); 
