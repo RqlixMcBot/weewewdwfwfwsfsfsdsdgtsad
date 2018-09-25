@@ -82,6 +82,32 @@ client.on('ready', () => {
 });
 
 
+client.on('message',async msg => {//Alpha Codes
+//Alpha Codes//Alpha Codes//Alpha Codes//Alpha Codes//Alpha Codes
+  var prefix = "*";//Alpha Codes
+//Alpha Codes
+  if(msg.content.startsWith(prefix + "user")) {//Alpha Codes
+  if(!msg.guild.member(msg.author).hasPermissions('MANAGE_CHANNELS')) return msg.reply('❌ **go play minecraft**');
+  if(!msg.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS'])) return msg.reply('❌ **البوت لا يمتلك صلاحية**');
+  msg.guild.createChannel(`يتم تحضير الروم :[]` , 'voice').then(time => {
+    time.overwritePermissions(msg.guild.id, {
+      CONNECT: false,
+      SPEAK: false
+    });
+  setInterval(() => {
+      var currentTime = new Date(),
+Year = currentTime.getFullYear(),
+Month = currentTime.getMonth() + 1,
+Dat = currentTime.getDate()//Alpha Codes
+      time.setName(`Members : ◤ → ${client.users.size} ← ◢`);
+ },1000);
+  });//Alpha Codes
+  }
+ 
+});
+
+
+
 
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {      const embed = new Discord.RichEmbed()
