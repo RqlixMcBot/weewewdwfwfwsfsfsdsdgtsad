@@ -279,7 +279,14 @@ footer: {
 
 
 
-
+client.on('message', message => {
+if (message.content.split(' ')[0] == '^bc')
+ message.guild.members.forEach( member => {
+         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+member.send( `${member} ! ` + "**" + message.guild.name + " : ** " + message.content.substr(3));
+                                                            message.delete();
+});
+});
 
 
 
