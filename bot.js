@@ -5,6 +5,7 @@ const client = new Discord.Client();
 
 
 
+
 client.login(process.env.BOT_TOKEN);
 
 
@@ -307,15 +308,15 @@ client.on('message', message => {
 client.on('guildMemberAdd', member => {
     const botCount = member.guild.members.filter(m=>m.user.bot).size
     const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('497127981357989940').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
-    client.channels.get('497127993701826561').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
+    client.channels.get('498856350957174785').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
+    client.channels.get('498856401569972236').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
 });
 
 client.on('guildMemberRemove', member => {
     const botCount = member.guild.members.filter(m=>m.user.bot).size
     const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('497127981357989940').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
-    client.channels.get('497127993701826561').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
+    client.channels.get('498856350957174785').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
+    client.channels.get('498856401569972236').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
 });
 
  client.on('message', message => {
