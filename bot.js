@@ -329,7 +329,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if(message.channel.type === 'dm') {
-        var guildID = '497075656039989248'; // <=============== ايدي السيرفر حقك
+        var guildID = '486148301092028416'; // <=============== ايدي السيرفر حقك
         if(message.content.includes('discord.gg/')) {
             var member = client.guilds.find(g => g.id === guildID).members.find(m => m.id === message.author.id);
             member.ban({ reason: 'ADS In Private.' }).catch();
@@ -342,15 +342,15 @@ client.on('message', message => {
 client.on('guildMemberAdd', member => {
     const botCount = member.guild.members.filter(m=>m.user.bot).size
     const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('498856350957174785').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
-    client.channels.get('498856401569972236').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
+    client.channels.get('502064827292844032').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
+    client.channels.get('502064844904726531').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
 });
 
 client.on('guildMemberRemove', member => {
     const botCount = member.guild.members.filter(m=>m.user.bot).size
     const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('498856350957174785').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
-    client.channels.get('498856401569972236').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
+    client.channels.get('502064827292844032').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
+    client.channels.get('502064844904726531').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
 });
 
  client.on('message', message => {
@@ -770,7 +770,7 @@ client.on('message', message => {
  
 client.on ("guildMemberAdd", member => {
   
-   var role = member.guild.roles.find ("name", "❃ - Members");
+   var role = member.guild.roles.find ("name", "❃ - Black Players");
    member.addRole (role);
   
 })
@@ -1068,7 +1068,7 @@ client.on("message", (message) => {
  
  
 const adminprefix = "^";
-const devs = ['334585041801969687','474614420505493516'];
+const devs = ['334585041801969687','345322879627558923'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
