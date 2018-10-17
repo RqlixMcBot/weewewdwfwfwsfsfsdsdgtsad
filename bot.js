@@ -339,19 +339,6 @@ client.on('message', message => {
 
 
 
-client.on('guildMemberAdd', member => {
-    const botCount = member.guild.members.filter(m=>m.user.bot).size
-    const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('502064827292844032').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
-    client.channels.get('502064844904726531').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
-});
-
-client.on('guildMemberRemove', member => {
-    const botCount = member.guild.members.filter(m=>m.user.bot).size
-    const memberCount = [member.guild.memberCount] - [botCount]
-    client.channels.get('502064827292844032').setName(`⟫『 ${memberCount} عدد الاعضاء 』⟪`);
-    client.channels.get('502064844904726531').setName(`⟫『 ${botCount} عدد البوتات 』⟪`);
-});
 
  client.on('message', message => {
  if (message.content.toLowerCase() === prefix + "move all") {
