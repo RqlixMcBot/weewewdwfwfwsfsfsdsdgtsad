@@ -1328,17 +1328,23 @@ client.on("message", message => {
 
 
   
-client.on('guildMemberAdd', member => {
-    var embed = new Discord.RichEmbed()
-    .setThumbnail(member.user.avatarURL)
-  .addField("***شكرا الانضمامك الينا***" ,member.user.username )
-    .setDescription('***بكل حب واحترام وشوق نستقبلك ونتمنى لك قضآء أجمل اللحظات ولآوقات معنا***')
-    .setColor('RANDOM')
-    .setImage('https://cdn.discordapp.com/icons/486148301092028416/580ba16212b2c3b5fe13252720da1b1b.jpg?size=128')
-var channel =member.guild.channels.find('name', 'chat')
-if (!channel) return;
-channel.send({embed : embed});
-});
+client.on("guildMemberAdd", member => {
+let welcomer = member.guild.channels.find("name","chat");
+      if(!welcomer) return;
+      if(welcomer) {
+         moment.locale('ar-ly');
+         var h = member.user;
+        let norelden = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setThumbnail(h.avatarURL)
+        .setAuthor(h.username,h.avatarURL)
+        .addField(': تاريخ دخولك الدسكورد',`${moment(member.user.createdAt).format('D/M/YYYY h:mm a')} **\n** \`${moment(member.user.createdAt).fromNow()}\``,true)
+         .setFooter(`${h.tag}`,"https://cdn.discordapp.com/icons/486148301092028416/580ba16212b2c3b5fe13252720da1b1b.jpg?size=128")
+     welcomer.send({embed:norelden});          
+               
+ 
+      }
+      });
     
 
 client.on('guildMemberRemove', Sal => { 
