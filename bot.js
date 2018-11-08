@@ -1328,23 +1328,28 @@ client.on("message", message => {
 
 
   
-client.on("guildMemberAdd", member => {
-let welcomer = member.guild.channels.find("name","chat");
-      if(!welcomer) return;
-      if(welcomer) {
-         moment.locale('ar-ly');
-         var h = member.user;
-        let norelden = new Discord.RichEmbed()
+client.on('guildMemberAdd', member => {
+    let channel = member.guild.channels.find('name', 'chat');
+    let memberavatar = member.user.avatarURL
+      if (!channel) return; 
+    let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
-        .setThumbnail(h.avatarURL)
-        .setAuthor(h.username,h.avatarURL)
-        .addField(': تاريخ دخولك الدسكورد',`${moment(member.user.createdAt).format('D/M/YYYY h:mm a')} **\n** \`${moment(member.user.createdAt).fromNow()}\``,true)
-         .setFooter(`${h.tag}`,"https://cdn.discordapp.com/icons/486148301092028416/580ba16212b2c3b5fe13252720da1b1b.jpg?size=128")
-     welcomer.send({embed:norelden});          
+        .setThumbnail(memberavatar)
+        .addField(':running_shirt_with_sash: | name :  ',`${member}`)
+        .addField(':loudspeaker: | نورت السيرفر ي قلبي' , `Welcome to the server, ${member}`)
+        .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
+                .addField('➡| انت العضو رقم',`${member.guild.memberCount}`)
                
- 
-      }
-      });
+                  .addField("Name:",`<@` + `${member.id}` + `>`, true)
+                      
+                                     .addField(' الـسيرفر', `${member.guild.name}`,true)
+                                       
+     .setFooter("Black Spirit")
+        .setTimestamp()
+    
+      channel.sendEmbed(embed);
+    });
+    
     
 
 client.on('guildMemberRemove', Sal => { 
