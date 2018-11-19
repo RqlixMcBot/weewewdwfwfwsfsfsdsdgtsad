@@ -31,7 +31,7 @@ client.on('ready', () => {
               console.log(`iTz_Volcano`);
       console.log(`Your Bot in  ${client.guilds.size} Servers `);
     console.log(`----------------`);
-  client.user.setGame(` ^help | ^clear `,"https://twitch.tv/")
+  client.user.setGame(` ●『  BlackSpirit Shop 』● `,"https://twitch.tv/")
 
 
 });
